@@ -1,0 +1,187 @@
+<!-- Jack Beeken -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cite Me! Popup</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="resources/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="resources/js/jquery-git.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="resources/js/bootstrap.min.js"></script>
+	</head>
+	<body bgcolor="silver">
+		<!-- Title -->
+		<div class="container" style="min-width: 700px">
+			<!-- <h5>Enter Citation</h5> -->
+		</div>
+		<!-- Forms -->
+		<div class="container">
+			<table><tr><td>
+			<!-- Selections -->
+			Select source type and citation style:
+			<p><select class="form-control-sm" style="width: 120px" id="doc_type">
+			  		<option value="Webpage">Webpage</option>
+			  		<option value="Book">Book</option>
+			  		<option value="Journal">Journal</option>
+			  		<option value="Magazine">Magazine</option>
+			  		<option value="Newspaper">Newspaper</option>
+			</select>
+			<select class="form-control-sm" style="width: 90px" id="doc_style">
+			  		<option value="MLA">MLA</option>
+			  		<option value="APA">APA</option>
+			  		<option value="Chicago">Chicago</option>
+			</select></p>
+			<!-- Author info -->
+				<p><h6>Author Information</h6>
+				<div id = "author">
+		 			<label id = "authorLabel" class="standard_label_style" style = "display:none;"><u>Primary Author</u></label>
+			 		<div class="form-group row">
+				 		<label class="col-form-label col-sm-4 form-control-sm" for="first">First Name: </label>
+				 	    	<input type="text" class="form-control col-sm-6 form-control-sm" name="first" id="first"  placeholder="Enter First Name">
+			 	    </div>
+			 	    <div class="form-group row">
+				 		<label class="col-form-label col-sm-4 form-control-sm" for="last">Last Name: </label>
+				 	    	<input type="text" class="form-control col-sm-6 form-control-sm" name="last" id="last"  placeholder="Enter Last Name">
+			 	    </div>
+		 		</div>
+		 		<div id = "author2" style = "display:none;">
+		 	    	<label class="standard_label_style"><u>Second Author</u></label>
+			 		<div class="form-group row">
+				 		<label class="col-form-label col-sm-4 form-control-sm" for="first2">First Name: </label>
+				 	    	<input type="text" class="form-control col-sm-6 form-control-sm" name="first2" id="first2"  placeholder="Enter First Name">
+			 	    </div>
+			 	    <div class="form-group row">
+				 		<label class="col-form-label col-sm-4 form-control-sm" for="last2">Last Name: </label>
+				 	    	<input type="text" class="form-control col-sm-6 form-control-sm" name="last2" id="last2"  placeholder="Enter Last Name">
+			 	    </div>
+		 		</div>
+		 		<div id = "author3" style = "display:none;">
+		 	    	<label class="standard_label_style"><u>Third Author</u></label>
+			 		<div class="form-group row">
+				 		<label class="col-form-label col-sm-4 form-control-sm" for="first3">First Name: </label>
+				 	    	<input type="text" class="form-control col-sm-6 form-control-sm" name="first3" id="first3"  placeholder="Enter First Name">
+			 	    </div>
+			 	    <div class="form-group row">
+				 		<label class="col-form-label col-sm-4 form-control-sm" for="last3">Last Name: </label>
+				 	    	<input type="text" class="form-control col-sm-6 form-control-sm" name="last3" id="last3"  placeholder="Enter Last Name">
+			 	    </div>
+		 		</div>
+		 		<input id="addAuthor" type="submit" value="Add Another Another" class="btn btn-default btn-sm">
+		 	</td>
+		 	<!-- Article Info -->
+		 	<td>
+				<p><h6>Article Information</h6>
+				<!-- Title -->
+				<div class="form-group row">
+	 				<label class="col-form-label col-sm-4 form-control-sm" for="article_title">Document Title: </label>
+	 	    		<input type="text" class="form-control col-sm-8 form-control-sm" name="article_title" id="article_title"  placeholder="Enter Title">
+ 	   			</div>
+ 	   			<div id = "website_input">
+			 		<div class="form-group row">
+				 		<label class="col-form-label col-sm-4 form-control-sm" for="website_title">Website Title: </label>
+				 	    <input type="text" class="form-control col-sm-8 form-control-sm" name="website_title" id="website_title"  placeholder="Enter Website Title">
+			 	    </div>
+			 	</div>
+			 	<div id ="journal_input" style="display: none">
+			 	    <div class="form-group row">
+				 		<label class="col-form-label col-sm-4 form-control-sm" for="journal_name">Journal Name: </label>
+				 	    <input type="text" class="form-control col-sm-8 form-control-sm" name="journal_name" id="journal_name"  placeholder="Enter Journal Name">
+			 	    </div>
+				 	</div>
+				 	<div id="magazine_input" style="display: none">
+				 	    <div class="form-group row">
+					 		<label class="col-form-label col-sm-4 form-control-sm" for="magazine_title">Magazine Title: </label>
+					 	    	<input type="text" class="form-control col-sm-8 form-control-sm" name="magazine_title" id="magazine_title"  placeholder="Enter Magazine Title">
+				 	    </div>
+				 	</div>
+				 	<div id="newspaper_input" style="display: none">
+				 	    <div class="form-group row">
+					 		<label class="col-form-label col-sm-4 form-control-sm" for="newspaper_name">Newspaper Name: </label>
+					 	    	<input type="text" class="form-control col-sm-8 form-control-sm" name="newspaper_name" id="newspaper_name"  placeholder="Enter Newspaper Name">
+				 	    </div>
+				 	</div>
+ 	   			</p>
+ 	   			<!-- Pub info -->
+				<p><h6>Publication Information</h6>
+	 			<div id="publication_date"> 
+			 		<form class = "row">
+			 			<label class="col-form-label col-sm-4 form-control-sm">Publication Date: </label>
+			 			<input type="date" id = "pub_date">
+			 		</form>
+	 			</div><br>
+				<div id = "publisher">
+	 				<div class="form-group row">
+		 				<label class="col-form-label col-sm-4 form-control-sm" for="publisher">Publisher: </label>
+		 	    		<input type="text" class="form-control col-sm-8 form-control-sm" name="publisher" id="pub"  placeholder="Enter Publisher">
+	 	    		</div>
+	 			</div>
+	 			<div id="city" style="display: none">
+			 	    <div class="form-group row">
+				 		<label class="col-form-label col-sm-4 form-control-sm" for="city">City of Publication: </label>
+				 	    	<input type="text" class="form-control col-sm-8 form-control-sm" name="city" id="city"  placeholder="Enter City of Publication">
+			 	    </div>
+			 	</div>
+			 	<div id="state" style="display: none">
+			 	    <div class="form-group row">
+				 		<label class="col-form-label col-sm-4 form-control-sm" for="state">State of Publication: </label>
+				 	    	<input type="text" class="form-control col-sm-8 form-control-sm" name="state" id="state"  placeholder="Enter State of Publication">
+			 	    </div>
+			 	</div>
+			 	<div id="edition" style="display: none">
+			 	    <div class="form-group row">
+				 		<label class="col-form-label col-sm-4 form-control-sm" for="edition">Edition: </label>
+				 	    	<input type="text" class="form-control col-sm-8 form-control-sm" name="edition" id="edition"  placeholder="Enter Book Edition">
+			 	    </div>
+			 	</div>
+	 			</p>
+	 			<!-- Additional info -->
+				<p><h6>Additional Information</h6>
+				<div id = "pages" style="display: none">
+			 	    <div class="form-group row">
+				 		<label class="col-form-label col-sm-4 form-control-sm" for="pages">Pages: </label>
+				 	    	<input type="text" class="form-control col-sm-8 form-control-sm" name="pages" id="pages"  placeholder="Enter Pages">
+			 	    </div>
+			 	</div>
+			 	<div id = "volume" style="display: none">
+			 	    <div class="form-group row">
+				 		<label class="col-form-label col-sm-4 form-control-sm" for="volume">Volume: </label>
+				 	    	<input type="text" class="form-control col-sm-8 form-control-sm" name="volume" id="volume"  placeholder="Enter Journal Volume">
+			 	    </div>
+			 	</div>
+			 	<div id="issue" style="display: none">
+			 	    <div class="form-group row">
+				 		<label class="col-form-label col-sm-4 form-control-sm" for="issue">Issue: </label>
+				 	    	<input type="text" class="form-control col-sm-8 form-control-sm" name="issue" id="issue"  placeholder="Enter Journal Issue">
+			 	    </div>
+			 	</div>
+			 	<div id="date_accessed_input">
+			 	    <form class="row">
+				 		<label class="col-form-label col-sm-4 form-control-sm">Date Accessed: </label>
+		 				<input type="date" id="date_accessed">
+			 	    </form>
+			 	    <br>
+			 	</div>
+				<div id="URL_input">
+	 	    		<div class="form-group row">
+		 				<label class="col-form-label col-sm-4 form-control-sm" for="url">URL: </label>
+		 	    		<input type="text" class="form-control col-sm-8 form-control-sm" name="url" id="url"  placeholder="Enter URL">
+	 	   			</div>
+	 			</div></p>
+			</td></tr>
+			<tr>
+				<td>
+					<!-- Autofill button -->
+					<input id="load" type="submit" value="Load Citation" class="btn btn-primary btn-sm">
+				</td>
+				<td align="right">				
+					<!-- Submit button -->
+					<input id="submit" type="submit" value="Cite Me!" class="btn btn-success btn-sm">
+				</td>
+			</tr>
+			</table>
+		</div>
+		<br>
+	</body>
+	<script type="text/javascript" src="./popup.js"></script>
+</html>

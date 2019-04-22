@@ -1,0 +1,206 @@
+<!-- 
+Author - Panther Epidemic
+Date - 04/05/19
+Class - Software Development Methods and Tools
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+ <style>
+ 	.addAuthor {
+	  background-color: white;
+	  color: black;
+	  border: 1px solid #555555;
+	  border-radius: 4px;
+	}
+ </style>
+ <head>
+ 	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+ 	<title>Citation form</title>
+ 	<link rel='icon' href='../resources/img/favicon.ico' type='image/x-icon'/>
+ 	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="resources/css/bootstrap.min.css">
+	<link href="./resources/css/my_style.css" rel="stylesheet">
+ </head>
+ <body>
+ <div class="container">
+ 	<h1>Cite Me!</h1>
+ 	<table cellpadding="5">
+ 		<tr>
+ 			<button class="btn btn-lg btn-primary" type="submit">Load</button>
+ 		</tr>
+ 		<tr>
+	 		<td>
+				<label class="standard_label_style"><strong>Source Type</strong></label>
+			</td>
+			<td>
+				<label class="standard_label_style"><strong>Citation Style</strong></label>
+		 	</td>
+		</tr>
+		<tr>
+			<td>
+				<select id = "type">
+			  		<option value="Book">Book</option>
+			  		<option value="Webpage">Webpage</option>
+			  		<option value="Journal">Journal</option>
+			  		<option value="Magazine">Magazine</option>
+			  		<option value="Newspaper">Newspaper</option>
+				</select>
+			</td>
+			<td>
+				<select id = "style">
+			  		<option value="MLA">MLA</option>
+			  		<option value="APA">APA</option>
+			  		<option value="Chicago">Chicago</option>
+				</select>
+			</td>
+		</tr>
+	</table>
+ 	<br>
+ 	<div>
+ 		<label class="standard_label_style"><strong>Author Information</strong></label>
+ 		<div id = "author">
+ 			<label id = "authorLabel" class="standard_label_style" style = "display:none;"><u>First Author</u></label>
+	 		<div class="form-group row">
+		 		<label class="col-form-label col-sm-2" for="first">First Name: </label>
+		 	    	<input type="text" class="form-control col-sm-4" name="first" id="first"  placeholder="Enter First Name">
+	 	    </div>
+	 	    <div class="form-group row">
+		 		<label class="col-form-label col-sm-2" for="last">Last Name: </label>
+		 	    	<input type="text" class="form-control col-sm-4" name="last" id="last"  placeholder="Enter Last Name">
+	 	    </div>
+	 	</div>
+ 	    <div id = "author2" style = "display:none;">
+ 	    	<label class="standard_label_style"><u>Second Author</u></label>
+	 		<div class="form-group row">
+		 		<label class="col-form-label col-sm-2" for="first2">First Name: </label>
+		 	    	<input type="text" class="form-control col-sm-4" name="first2" id="first2"  placeholder="Enter First Name">
+	 	    </div>
+	 	    <div class="form-group row">
+		 		<label class="col-form-label col-sm-2" for="last2">Last Name: </label>
+		 	    	<input type="text" class="form-control col-sm-4" name="last2" id="last2"  placeholder="Enter Last Name">
+	 	    </div>
+	 	</div>
+	 	<div id = "author3" style = "display:none;">
+ 	    	<label class="standard_label_style"><u>Third Author</u></label>
+	 		<div class="form-group row">
+		 		<label class="col-form-label col-sm-2" for="first3">First Name: </label>
+		 	    	<input type="text" class="form-control col-sm-4" name="first3" id="first3"  placeholder="Enter First Name">
+	 	    </div>
+	 	    <div class="form-group row">
+		 		<label class="col-form-label col-sm-2" for="last3">Last Name: </label>
+		 	    	<input type="text" class="form-control col-sm-4" name="last3" id="last3"  placeholder="Enter Last Name">
+	 	    </div>
+	 	</div>
+	 	<button type = "button" class = "addAuthor" id = "addAuthor">Add Another Author</button>
+ 	</div>
+ 	<br>
+ 	<div>
+ 		<label class="standard_label_style"><strong>Article Information</strong></label>
+ 		<div class="form-group row">
+	 		<label class="col-form-label col-sm-2" for="article_title">Article Title: </label>
+	 	    	<input type="text" class="form-control col-sm-4" name="article_title" id="article_title"  placeholder="Enter Article Title">
+ 	    </div>
+ 	    <div id = "website_input">
+	 		<div class="form-group row">
+		 		<label class="col-form-label col-sm-2" for="website_title">Website Title: </label>
+		 	    <input type="text" class="form-control col-sm-4" name="website_title" id="website_title"  placeholder="Enter Website Title">
+	 	    </div>
+	 	</div>
+	 	<div id ="journal_input">
+	 	    <div class="form-group row">
+		 		<label class="col-form-label col-sm-2" for="journal_name">Journal Name: </label>
+		 	    <input type="text" class="form-control col-sm-4" name="journal_name" id="journal_name"  placeholder="Enter Journal Name">
+	 	    </div>
+	 	</div>
+	 	<div id="magazine_input">
+	 	    <div class="form-group row">
+		 		<label class="col-form-label col-sm-2" for="magazine_title">Magazine Title: </label>
+		 	    	<input type="text" class="form-control col-sm-4" name="magazine_title" id="magazine_title"  placeholder="Enter Magazine Title">
+	 	    </div>
+	 	</div>
+	 	<div id="newspaper_input">
+	 	    <div class="form-group row">
+		 		<label class="col-form-label col-sm-2" for="newspaper_name">Newspaper Name: </label>
+		 	    	<input type="text" class="form-control col-sm-4" name="newspaper_name" id="newspaper_name"  placeholder="Enter Newspaper Name">
+	 	    </div>
+	 	</div>
+ 	</div>
+ 	<br>
+ 	<div>
+ 		<label class="standard_label_style"><strong>Publication Information</strong></label>
+ 		<div id="publication_date"> 
+	 		<form class = "row">
+	 			<label class="col-form-label col-sm-2">Publication Date: </label>
+	 			<input type="date" id = "pub_date">
+	 		</form>
+	 	</div>
+ 		<br>
+ 		<div id = "publisher">
+	 		<div class="form-group row">
+		 		<label class="col-form-label col-sm-2" for="publisher">Publisher: </label>
+		 	    	<input type="text" class="form-control col-sm-4" name="publisher" id="publisher"  placeholder="Enter Publisher">
+	 	    </div>
+	 	</div>
+	 	<div id="city">
+	 	    <div class="form-group row">
+		 		<label class="col-form-label col-sm-2" for="city">City of Publication: </label>
+		 	    	<input type="text" class="form-control col-sm-4" name="city" id="city"  placeholder="Enter City of Publication">
+	 	    </div>
+	 	</div>
+	 	<div id="state">
+	 	    <div class="form-group row">
+		 		<label class="col-form-label col-sm-2" for="state">State of Publication: </label>
+		 	    	<input type="text" class="form-control col-sm-4" name="state" id="state"  placeholder="Enter State of Publication">
+	 	    </div>
+	 	</div>
+ 	</div>
+ 	<br>
+ 	<div>
+ 		<label class="standard_label_style"><strong>Additional Information</strong></label>
+ 	    <div id = "pages">
+	 	    <div class="form-group row">
+		 		<label class="col-form-label col-sm-2" for="pages">Pages: </label>
+		 	    	<input type="text" class="form-control col-sm-4" name="pages" id="pages"  placeholder="Enter Pages">
+	 	    </div>
+	 	</div>
+	 	<div id = "volume">
+	 	    <div class="form-group row">
+		 		<label class="col-form-label col-sm-2" for="volume">Volume: </label>
+		 	    	<input type="text" class="form-control col-sm-4" name="volume" id="volume"  placeholder="Enter Journal Volume">
+	 	    </div>
+	 	</div>
+	 	<div id="issue">
+	 	    <div class="form-group row">
+		 		<label class="col-form-label col-sm-2" for="issue">Issue: </label>
+		 	    	<input type="text" class="form-control col-sm-4" name="issue" id="issue"  placeholder="Enter Journal Issue">
+	 	    </div>
+	 	</div>
+	 	<div id="edition">
+	 	    <div class="form-group row">
+		 		<label class="col-form-label col-sm-2" for="edition">Edition: </label>
+		 	    	<input type="text" class="form-control col-sm-4" name="edition" id="edition"  placeholder="Enter Book Edition">
+	 	    </div>
+	 	</div>
+	 	<div id="date_accessed_input">
+	 	    <form class="row">
+		 		<label class="col-form-label col-sm-2">Date Accessed: </label>
+ 				<input type="date" id="date_accessed">
+	 	    </form>
+	 	    <br>
+	 	</div>
+	 	<div id="URL_input">
+	 	    <div class="form-group row">
+		 		<label class="col-form-label col-sm-2" for="url">URL: </label>
+		 	    	<input type="text" class="form-control col-sm-4" name="url" id="url"  placeholder="Enter URL">
+	 	    </div>
+	 	</div>
+ 	</div>
+ 	<div>
+ 		<button class="btn btn-lg btn-primary" type="submit">Cite Me!</button>
+ 	</div>
+ </div>
+ </body>
+</html>

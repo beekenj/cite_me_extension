@@ -1,0 +1,24 @@
+{
+  "name": "Cite Me",
+  "version": "0.3",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["resources/js/jquery-git.min.js", 
+            "resources/js/content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "g4555.png",
+    "default_title": "Create citation"
+  },
+  "permissions": ["contextMenus"],
+  "manifest_version": 2
+}
