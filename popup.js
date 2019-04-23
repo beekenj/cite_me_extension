@@ -30,7 +30,7 @@ function fillForm() {
 	// Fill 2nd author field
 	var input = document.getElementById("first2");
 	if(author2 != undefined) {
-		document.getElementById("author2").style.display = "block"
+		document.getElementById("author2").style.display = "block";
 		input.value = "";
 		input.value = getFirst(author2);		
 	}
@@ -474,4 +474,6 @@ document.getElementById("addAuthor").onclick = addAuthorDisp;
 
 document.getElementById("doc_type").onchange = changeForm;
 document.getElementById("doc_style").onchange = changeForm;
+
+// document.getElementById("submit").onclick = window.close;
 

@@ -40,14 +40,11 @@ chrome.contextMenus.create({
 	"onclick": webHandler
 });
 
-if(author != undefined) {
-	chrome.contextMenus.create({
-		"title": "Cite 2nd Author",
-		"contexts": ["selection"],
-		"onclick": auth2Handler
-	});
-	
-}
+chrome.contextMenus.create({
+	"title": "Cite 2nd Author",
+	"contexts": ["selection"],
+	"onclick": auth2Handler
+});
 
 chrome.contextMenus.create({
 	"title": "Cite 3rd Author",
