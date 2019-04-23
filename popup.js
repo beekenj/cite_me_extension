@@ -44,6 +44,8 @@ function fillForm() {
 	// Fill 3rd author field
 	var input = document.getElementById("first3");
 	if(author3 != undefined) {
+		document.getElementById("author2").style.display = "block";
+		document.getElementById("author3").style.display = "block";
 		input.value = "";
 		input.value = getFirst(author3);		
 	}
