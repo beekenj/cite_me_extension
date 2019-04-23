@@ -100,6 +100,10 @@ function getLast(name) {
 	return name.split(' ').slice(-1).join(' ');
 }
 
+function getYear(date) {
+	return date.slice(0, 4)
+}
+
 // Implement button clicks
 document.getElementById('load').onclick = fillForm;
 
@@ -471,11 +475,64 @@ function changeForm(){
 	}
 }
 
+function authorInjMLA(){
+	//author last, first + .
+	var inj = "";
+	var a1last = document.getElementById("last").value;
+	var a1first = document.getElementById("first").value;
+	var a2last = document.getElementById("last2").value;
+	var a2first = document.getElementById("first2").value;
+	var a3last = document.getElementById("last3").value;
+	var a3first = document.getElementById("first3").value;
+	if (a1last != "" && a1first != ""){
+		if (a2last == "" && a2first == ""){
+			inj += a1last + ", " + a1first + ". ";
+		} else if (a3last == "" && a3first == ""){
+			inj += a1last + ", " + a1first + " and " + a2first + " " + a2last + ". ";
+		} else {
+			inj += a1last + ", " + a1first + ", et al. ";
+		}
+	}
+	return inj;
+}
+
+function citeThis() {
+	var inj = "";
+	inj += authorInjMLA();
+	//" + article title + ." 
+	var tit = document.getElementById("article_title").value;
+	if (tit != ""){
+		inj += '"' + tit + '." ';
+	}
+	//website title ITALICIZED + ,
+	var webTit = document.getElementById("website_title").value;
+	if (webTit != ""){
+		inj += "<i>" + webTit + "</i>, ";
+	}
+	//publisher + ,
+	var pub = document.getElementById("pub").value;
+	if (pub != ""){
+		inj +=  pub + ", ";
+	}
+	// day month year of publication + ,
+	//FORMAT THIS
+	var date = document.getElementById("pub_date").value;
+	if (date != ""){
+		inj +=  getYear(date) + ", ";
+	}
+	//URL + .
+	var url = document.getElementById("url").value;
+	if (url != ""){
+		inj +=  url + ".";
+	}
+	document.getElementById("printCite").innerHTML = inj;
+}
+
 document.getElementById("addAuthor").onclick = addAuthorDisp;
 
 
 document.getElementById("doc_type").onchange = changeForm;
 document.getElementById("doc_style").onchange = changeForm;
 
-// document.getElementById("submit").onclick = window.close;
+document.getElementById("submit").onclick = citeThis;
 
