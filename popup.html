@@ -119,13 +119,13 @@
 	 			<div id="city" style="display: none">
 			 	    <div class="form-group row">
 				 		<label class="col-form-label col-sm-4 form-control-sm" for="city">City of Publication: </label>
-				 	    	<input type="text" class="form-control col-sm-8 form-control-sm" name="city" id="city"  placeholder="Enter City of Publication">
+				 	    	<input type="text" class="form-control col-sm-8 form-control-sm" name="city" id="cty"  placeholder="Enter City of Publication">
 			 	    </div>
 			 	</div>
 			 	<div id="state" style="display: none">
 			 	    <div class="form-group row">
 				 		<label class="col-form-label col-sm-4 form-control-sm" for="state">State of Publication: </label>
-				 	    	<input type="text" class="form-control col-sm-8 form-control-sm" name="state" id="state"  placeholder="Enter State of Publication">
+				 	    	<input type="text" class="form-control col-sm-8 form-control-sm" name="state" id="stt"  placeholder="Enter State of Publication">
 			 	    </div>
 			 	</div>
 			 	<div id="edition" style="display: none">
@@ -140,19 +140,25 @@
 				<div id = "pages" style="display: none">
 			 	    <div class="form-group row">
 				 		<label class="col-form-label col-sm-4 form-control-sm" for="pages">Pages: </label>
-				 	    	<input type="text" class="form-control col-sm-8 form-control-sm" name="pages" id="pages"  placeholder="Enter Pages">
+				 	    	<input type="text" class="form-control col-sm-8 form-control-sm" name="pages" id="pgs"  placeholder="Enter Pages">
 			 	    </div>
 			 	</div>
-			 	<div id = "volume" style="display: none">
+			 	<div id="volume" style="display: none">
 			 	    <div class="form-group row">
 				 		<label class="col-form-label col-sm-4 form-control-sm" for="volume">Volume: </label>
-				 	    	<input type="text" class="form-control col-sm-8 form-control-sm" name="volume" id="volume"  placeholder="Enter Journal Volume">
+				 	    	<input type="text" class="form-control col-sm-8 form-control-sm" name="volume" id="vol"  placeholder="Enter Journal Volume">
 			 	    </div>
 			 	</div>
 			 	<div id="issue" style="display: none">
 			 	    <div class="form-group row">
 				 		<label class="col-form-label col-sm-4 form-control-sm" for="issue">Issue: </label>
-				 	    	<input type="text" class="form-control col-sm-8 form-control-sm" name="issue" id="issue"  placeholder="Enter Journal Issue">
+				 	    	<input type="text" class="form-control col-sm-8 form-control-sm" name="issue" id="iss"  placeholder="Enter Journal Issue">
+			 	    </div>
+			 	</div>
+			 	<div id="database" style="display: none">
+			 	    <div class="form-group row">
+				 		<label class="col-form-label col-sm-4 form-control-sm" for="database">Database: </label>
+				 	    	<input type="text" class="form-control col-sm-8 form-control-sm" name="database" id="database_title"  placeholder="Enter Database Name">
 			 	    </div>
 			 	</div>
 			 	<div id="date_accessed_input">
@@ -162,6 +168,13 @@
 			 	    </form>
 			 	    <br>
 			 	</div>
+			 	<div id="doi_input" style="display: none">
+					<div class="form-group row">
+						<label class="col-form-label col-sm-4  form-control-sm" for="doi">DOI: </label>
+						<input type="text" class="form-control col-sm-8 form-control-sm" name="doi" id="doi"
+							placeholder="Enter DOI #" default="">
+						</div>
+					</div>
 				<div id="URL_input">
 	 	    		<div class="form-group row">
 		 				<label class="col-form-label col-sm-4 form-control-sm" for="url">URL: </label>
@@ -174,7 +187,8 @@
 					<!-- Autofill button -->
 					<input id="load" type="submit" value="Load Citation" class="btn btn-primary btn-sm">
 				</td>
-				<td align="right">				
+				<td align="right">
+					<input id="qcite" type="submit" value="Quick Cite" class="btn btn-primary btn-sm">				
 					<!-- Submit button -->
 					<input id="submit" type="submit" value="Cite Me!" class="btn btn-success btn-sm">
 				</td>

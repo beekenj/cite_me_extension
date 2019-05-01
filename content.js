@@ -1,7 +1,9 @@
 // content.js
 
 // Grab title tag from page
-let doc_title = document.getElementsByTagName("TITLE")[0].text
+if (getElementsByTagName("TITLE")[0] != undefined) {
+	let doc_title = document.getElementsByTagName("TITLE")[0].text	
+}
 
 // Send default information
 chrome.runtime.sendMessage({title: doc_title, url: window.location.href});
